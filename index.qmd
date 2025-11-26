@@ -1,0 +1,30 @@
+---
+title: "QR Code Generator"
+---
+
+```{r}
+#| eval: false
+
+install.packages("qrcode")
+```
+
+```{r}
+library(qrcode)
+```
+
+# Cytometry In R Google Form
+```{r}
+code <- qr_code("https://docs.google.com/forms/d/e/1FAIpQLScPK4V_WNSgQvZNq7aIHpoiX8pi3kiuCfI0Tp7hQkVJS3HPtQ/viewform")
+
+generate_svg(code, filename = "images/CytometryInR_Google.svg")
+plot(code)
+```
+
+# Cytometry In R Website
+```{r}
+code <- qr_code("https://umgccfcss.github.io/CytometryInR/")
+
+generate_svg(code, filename = "images/CytometryInR_Website.svg")
+plot(code)
+```
+
